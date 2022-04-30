@@ -1,0 +1,63 @@
+:root {
+  --border-color: rgba(0, 0, 0, 0.2);
+  --border-radius: 5px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1em 1.5em;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.list-input input {
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.list-input input:focus,
+.list-input input:active,
+.list-input .active {
+  border: 2px solid gold;
+}
+
+form button[type="submit"] {
+  background-color: black;
+  color: white;
+  outline: none;
+  padding: 0.3rem 0.5rem;
+  text-transform: uppercase;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.list-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.list-input input::-webkit-outer-spin-button,
+.list-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
